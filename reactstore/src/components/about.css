@@ -1,0 +1,57 @@
+.about{
+    background-color:lightgreen;
+    border:1px solid #333;
+}
+
+.about h3{
+    margin-top:20px;
+    margin-bottom:5px;
+}
+.about h2{
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.about h5{
+    font-size:20px;
+}
+
+.about .title-text{
+    padding:40px 20px;
+    background:lightyellow;
+    
+}
+
+.about .title-text h3{
+    font-size:60px;
+}
+.about .title-text i{
+    font-size:30px;
+}
+
+.about iframe{
+    width:100%;
+    max-height:300px;
+    margin-top:50px;
+}
+
+.about .about-container{
+    display:flex;
+    gap:45px;
+    margin:0 35px;
+}
+.about .about-container p{
+    text-align:justify;
+}
+.about img{
+    max-width:200px;
+}
+@media(max-width:750px){
+    .about .about-container{
+        flex-direction:column;
+    }
+}
+
+.about .svg-container{
+    overflow:hidden;
+}

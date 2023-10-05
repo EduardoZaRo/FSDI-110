@@ -1,0 +1,110 @@
+.navbarcomponent{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background:green;
+    min-height:60px;
+    position:sticky;
+    top: 0px;
+    z-index:999;
+    
+}
+.navbarcomponent .user-container{
+    display:flex;
+    flex-direction:column;
+    color:white;
+    border:1px solid white;
+    border-radius:10px;
+    padding:2px 5px;
+    margin:5px 0;
+}
+.navbarcomponent .user-container svg{
+    font-size:25px;
+}
+.navbarcomponent .user-container label{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+
+.navbarcomponent h1,
+.navbarcomponent nav > a,
+.navbarcomponent nav > label
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    color:white;
+}
+
+.navbarcomponent h2{
+    text-align:center;
+}
+.navbarcomponent > h1{
+    width:40%;
+    text-align:center;
+}
+.navbarcomponent nav{
+    display:flex;
+    gap:60px;
+    padding:0 50px;
+}
+.navbarcomponent i{
+    padding-right:10px;
+}
+
+.navbarcomponent a{
+    text-decoration:none;
+    text-align:center;
+    color:blue;
+}
+
+@media(max-width:500px){
+    .navbarcomponent > h1{
+        display:none;
+    }
+    .navbarcomponent .menu{
+        width:100%;
+    }
+}
+
+@media(min-width:940px){
+    .navbarcomponent .header-nav{
+        display:block;
+        display:flex;
+        
+    }
+    .navbarcomponent .navbar{
+        display:none;
+    }
+}
+@media(max-width:940px){
+    .navbarcomponent h1,
+    .navbarcomponent .header-nav{
+        display:none;
+    }
+    
+
+    .navbarcomponent .navbar{
+        padding:20px;
+        display:block;
+        width:100%;
+        background-color:green!important;
+    }
+    .navbarcomponent nav a,
+    .navbarcomponent nav label
+    {
+        color:white!important;
+    }
+    .navbarcomponent .nav-item{
+        padding:10px 20px;
+    }
+    .navbarcomponent button.navbar-toggler.collapsed, 
+    .navbarcomponent button.navbar-toggler{
+        background:white;
+        border:1px solid white;
+    }
+}
