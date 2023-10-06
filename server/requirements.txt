@@ -4,3 +4,4 @@ flask_cors==3.0.10
 pymongo==4.5.0
 certifi==2023.7.22
 pymongo[srv]
+Werkzeug==2.3.7
