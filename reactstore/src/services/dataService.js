@@ -60,7 +60,7 @@ var catalog = [
 ];
 
 class DataService {
-    serverURL = "http://127.0.0.1:5000";
+    serverURL = "https://flask-n4ix.onrender.com";
     async getProducts(){
         // return catalog;
         const response = await axios.get(this.serverURL + "/api/products");
