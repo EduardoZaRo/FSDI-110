@@ -1,7 +1,7 @@
 import pymongo
 import certifi
 # from secret_keys import con_str
-const_str = os.getenv('MONGODB_URI')
+cons_str = os.getenv('MONGODB_URI')
 
 developer = {
     "first"  : "Irvin",
