@@ -67,5 +67,5 @@ def get_by_category(category):
         products.append(fix_id(product))
     return json.dumps(products)
 
-app.run(debug=True)
+# app.run(debug=True)
 
