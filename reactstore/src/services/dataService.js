@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 var catalog = [
     {
         "title": "Raspberry pi 3",
@@ -58,8 +60,17 @@ var catalog = [
 ];
 
 class DataService {
-    getProducts(){
-        return catalog;
+    serverURL = "http://127.0.0.1:5000";
+    async getProducts(){
+        // return catalog;
+        const response = await axios.get(this.serverURL + "/api/products");
+        return response.data;
+    }
+
+    async saveProduct(product){
+        
+        let response = await axios.post(this.serverURL + "/api/products", product);
+        return response.data;
     }
 }
 

@@ -23,9 +23,10 @@
     align-items:center;
 }
 
-.product .product-img-container > img{
+.product .product-img-container{
     max-height:200px;
     max-width:210px;
+    margin:auto;
 }
 .product .prices-container,
 .product .labels-container

@@ -1,8 +1,10 @@
 from flask import Flask, request
 from config import developer,db
 import json
+from flask_cors import CORS
 
 app = Flask("server")
+CORS(app) #disabling cors policy
 
 @app.get("/")
 def hello():

@@ -7,6 +7,8 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import {useContext} from 'react';
 import StoreContext from '../state/storeContext';
 
+import ImageZoom from 'react-image-zooom';
+
 function Product(props){
     const [quantity, setQuantity] = useState(1);
     const [inCart, setInCart] = useState(false);
@@ -49,7 +51,7 @@ function Product(props){
                 width:"238px"
                 }}>This product is in your cart</p>
             <div className="product-img-container">
-                <img src={"/images/"+props.data.image} alt="product" />
+                <ImageZoom src={"/images/"+props.data.image} alt="product" className="gallery-img" zoom="300"/>
             </div>
 
             <div className="labels-container">
@@ -57,7 +59,7 @@ function Product(props){
                 <label><strong>Total</strong> </label>
             </div>
             <div className="prices-container">
-                <label className="price">{props.data.price.toFixed(2)}$</label>
+                <label className="price">{parseFloat(props.data.price).toFixed(2)}$</label>
                 <label className="total"><strong></strong> {getTotal()}$</label>
             </div>
 

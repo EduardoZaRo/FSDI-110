@@ -1,11 +1,18 @@
 import "./admin.css";
 import {useState} from 'react';
+import DataService from "../services/dataService";
+
 function Admin() {
     const [product, setProduct] = useState({});
     const [coupon, setCoupon] = useState({});
     const [allProducts, setAllProducts] = useState([]);
     const [allCoupons, setAllCoupons] = useState([]);
     function handleSaveProduct(){
+        let fixedProd = {...product};
+        fixedProd.image = fixedProd.image.split("\\")[2];
+        fixedProd.pricce = parseFloat(fixedProd.price);
+        let service = new DataService();
+        service.saveProduct(fixedProd);
         let copy = [...allProducts];
         copy.push(product)
         setAllProducts(copy);
