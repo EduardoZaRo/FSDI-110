@@ -48,7 +48,8 @@ function Product(props){
                 display: inCart === true ? "block" : "none", 
                 background:"orange",
                 position:"absolute",
-                width:"238px"
+                width:"238px",
+                zIndex:998
                 }}>This product is in your cart</p>
             <div className="product-img-container">
                 <ImageZoom src={"/images/"+props.data.image} alt="product" className="gallery-img" zoom="300"/>
